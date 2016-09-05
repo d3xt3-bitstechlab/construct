@@ -1,6 +1,6 @@
 language: python
 
-sudo: false
+sudo: true
 
 cache:
   directories:
@@ -14,6 +14,9 @@ python:
     - "3.5"
     - "pypy"
     - "pypy3"
+
+install:
+    - sudo apt-get install -qq python-numpy
 
 before_script:
     - "export PYTHONPATH=$PYTHONPATH:`pwd`"
